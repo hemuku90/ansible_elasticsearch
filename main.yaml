@@ -5,7 +5,6 @@
     - { role: elasticsearch, es_instance_name: "node1", es_config: { discovery.zen.ping.unicast.hosts: "10.20.1.39, 10.20.1.71", network.host: "0", cluster.name: "production", http.port: 9200, transport.tcp.port: 9300, node.data: false, node.master: true,cluster.initial_master_nodes: "10.20.1.39" } }
   vars:
     es_major_version: "7.x"
-    #es_version: "2.2.1"
     es_heap_size: "2g"
     es_cluster_name: "production"
 - name: Install data nodes
@@ -14,7 +13,6 @@
     - { role: elasticsearch, es_instance_name: "node2", es_config: { discovery.zen.ping.unicast.hosts: "10.20.1.39, 10.20.1.71", network.host: "0", cluster.name: "production", http.port: 9200, transport.tcp.port: 9300, node.data: true, node.master: true,cluster.initial_master_nodes: "10.20.1.39" } }
   vars:
     es_major_version: "7.x"
-    #es_version: "2.2.1"
     es_heap_size: "2g"
     es_cluster_name: "production"
 - name:  Install more data nodes
@@ -23,6 +21,5 @@
     - { role: elasticsearch, es_instance_name: "node3", es_config: { discovery.zen.ping.unicast.hosts: "10.20.1.39, 10.20.1.71", network.host: "0", cluster.name: "production", http.port: 9200, transport.tcp.port: 9300, node.data: true, node.master: false,cluster.initial_master_nodes: "10.20.1.39" } }
   vars:
     es_major_version: "7.x"
-    #es_version: "2.2.1"
     es_heap_size: "2g"
     es_cluster_name: "production"
