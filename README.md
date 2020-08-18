@@ -1,4 +1,4 @@
-##Instrcution for setting up HA for Elasticsearch cluster.
+Instrcution for setting up HA for Elasticsearch cluster.
 
 1. Please launch minimum 3 instances in private subnet of you own by using the script provided in launch_instance directory. Please make sure to change the variables as per your environment.
 2. Once launched then please install ansible on your control machine maybe one of the servers that you had launched let's say node01.
