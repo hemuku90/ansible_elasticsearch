@@ -10,7 +10,7 @@
   set_fact: list_command=""
 #If we are reinstalling all plugins, e.g. to a version change, we need to remove all plugins (inc. x-pack) to install any plugins. Otherwise we don't consider x-pack so the role stays idempotent.
 - name: set fact list_command check for x-pack
-  set_fact: list_command="| grep -vE 'x-pack'"
+  set_fact: list_command= "| grep -vE 'x-pack'"
   when: not es_plugins_reinstall
 
 - name: remove x-pack plugin directory when it isn't a plugin
